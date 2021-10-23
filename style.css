@@ -20,12 +20,30 @@ body {
   background-color: var(--black);  
 }
 
-main {
-  background: url(assets/newmobile.png) no-repeat center/cover;  
+main {  
+  /* background: url(assets/newmobile.png) no-repeat center/cover;     */
   width: 100vw;  
   min-height: 812px;
-  height: 100vh;
+  height: 100vh;  
 }
+
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  main {
+    background: url(assets/newmobile.png) no-repeat center/cover;
+    }
+}
+
+@media (min-width: 1025px) {
+  main {
+    background-image: url(assets/newdesktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+}
+
 
 .container {
   max-width: 250px;
@@ -34,14 +52,11 @@ main {
   text-align: center;
 }
 
-img {
-  border-radius: 20px;
-}
-
 .avatar {
   width: 10rem;
   margin: 10rem auto 0;
   position: relative;
+  top: 15px;
 }
 
 .avatar span {
